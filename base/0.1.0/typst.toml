@@ -1,0 +1,11 @@
+[package]
+name = "base"
+version = "0.1.0"
+entrypoint = "lib.typ"
+authors = ["frpelaez <frpelaezarias@gmail.com>"]
+license = "UCM"
+description = "Base template."
+
+[template]
+path = "template"
+entrypoint = "main.typ"
