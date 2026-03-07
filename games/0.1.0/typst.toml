@@ -1,0 +1,11 @@
+[package]
+name = "games"
+version = "0.1.0"
+entrypoint = "lib.typ"
+authors = ["frpelaez <frpelaezarias@gmail.com>"]
+license = "UCM"
+description = "Template for Game Theory."
+
+[template]
+path = "template"
+entrypoint = "main.typ"
