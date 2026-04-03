@@ -15,7 +15,6 @@
 #set par(
   justify: true,
   leading: 0.65em,
-  // first-line-indent: 1.5em,
 )
 
 #show heading.where(level: 1): it => {
@@ -48,6 +47,12 @@
   [#body]
 }
 
+#let exercise = (number, body) => {
+  note(title: [Ejercicio #number])[
+    #body
+  ]
+}
+
 #let solution = body => {
   text(weight: "semibold")[#underline("Solución") \ ]
   [#body]
@@ -55,8 +60,8 @@
 }
 
 #let game2x2(
-  row_names: ("A", "B"),
-  col_names: ("a", "b"),
+  row-names: ("A", "B"),
+  col-names: ("a", "b"),
   p11: (0, 0),
   p12: (0, 0),
   p21: (0, 0),
@@ -67,9 +72,9 @@
     rows: (auto, 30pt, 30pt),
     align: center + horizon,
     stroke: (x, y) => if x > 0 and y > 0 { 0.5pt + black } else { none },
-    [], [*#col_names.at(0)*], [*#col_names.at(1)*],
-    [*#row_names.at(0)*], [$(#p11.at(0), #p11.at(1))$], [$(#p12.at(0), #p12.at(1))$],
-    [*#row_names.at(1)*], [$(#p21.at(0), #p21.at(1))$], [$(#p22.at(0), #p22.at(1))$],
+    [], [*#col-names.at(0)*], [*#col-names.at(1)*],
+    [*#row-names.at(0)*], [$(#p11.at(0), #p11.at(1))$], [$(#p12.at(0), #p12.at(1))$],
+    [*#row-names.at(1)*], [$(#p21.at(0), #p21.at(1))$], [$(#p22.at(0), #p22.at(1))$],
   )
 }
 
